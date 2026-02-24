@@ -24,10 +24,11 @@ By the end of this lab you will be able to:
 - Produce a structured analytical report summarizing methodology, results, and insights
 ----
 
-## Section 0 — Load Raw Data and Apply Minimal Preprocessing
+## Section 1 — Data Setup (Load Raw Data and Apply Minimal Preprocessing)
 
-In Lab 7, you performed a full preprocessing workflow that included cleaning, outlier removal, correlation analysis, class balance inspection, and scaling the feature matrix. However, Lab 8 may be run in a new notebook, and variables such as clean_df, X, and X_normalized will not exist automatically. To make Lab 8 self‑contained and reproducible, we reload the raw dataset and repeat the minimum required preprocessing steps so that the data is ready for modeling.
-Section 0 re‑creates the essential outputs of Lab 7:
+In Lab 7, you performed a full preprocessing workflow that included cleaning, outlier removal, correlation analysis, class balance inspection, and scaling the feature matrix. However, Lab 8 may be run in a new notebook, and variables such as `clean_df`, `X`, and `X_normalized` will not exist automatically. To make Lab 8 self‑contained and reproducible, we reload the raw dataset and repeat the minimum required preprocessing steps, so that the data is ready for modeling.
+
+Section 1 re‑creates the essential outputs of Lab 7:
 
 - Load the original CSV
 - Remove outliers using the same IQR technique
@@ -67,9 +68,32 @@ scaler = MinMaxScaler()
 X_train_scaled = scaler.fit_transform(X_train)  # fit on train
 X_test_scaled  = scaler.transform(X_test)       # transform test
 ```
+
+You may be thinking why we split first, then scale (even though we scaled in Lab 7). In Lab 7, scaling was performed as part of exploratory data analysis, not model training. Its purpose was:
+- to compare feature ranges
+- to understand relationships
+- to visually inspect normalized distributions
+- to prepare for future modeling
+- to introduce students to scaling early
+
+However, the scaling done in Lab 7 is not appropriate for actual model training because scaling must always be fit on the training set only. If we scale **before** splitting, this happens:
+- the scaler “looks at” the entire dataset, including test data.
+- this gives the model information about the test set it shouldn’t have.
+- this is called **data leakage**, and it makes evaluation unreliable  
+
+Therefore, Lab 8 uses the correct machine‑learning practice:
+
+```text
+Split → Fit scaler on X_train → Transform X_train & X_test
+```
+
+This ensures that the model never sees test‑set information during training and that scaling parameters (min, max, mean, std) come only from the training data. This keeps evaluation metrics valid and trustworthy.
+This is critically important in cybersecurity, where even small leaks can result in models that appear extremely accurate but fail catastrophically on real‑world threat data.
+Now that the data is properly prepared, we can proceed to **Step 2: Train a Classification Model**.
+
 ----
 
-## Section 1 — Train–Test Split
+## Section 2 — Train–Test Split
 Before we train any machine‑learning model, we must split our dataset into two parts:
 
 - Training set — used to fit/learn the model
