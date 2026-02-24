@@ -93,23 +93,40 @@ Now that the data is properly prepared, we can proceed to **Step 2: Train a Cl
 
 ----
 
-## Section 2 — Train–Test Split
-Before we train any machine‑learning model, we must split our dataset into two parts:
+## Step 2 — Train a Classification Model
 
-- Training set — used to fit/learn the model
-- Testing set — used to evaluate how well the model generalizes to unseen data
+Now that the dataset has been properly prepared (loaded, cleaned, split into training/testing sets, and scaled), we can train our first supervised machine‑learning model. In this lab, we will use **Logistic Regression**, a widely used baseline classifier for binary classification tasks. It is simple, fast, easy to interpret, and performs well when features have been normalized — which we ensured in Section 1.
 
-This is one of the most important steps in the entire machine‑learning workflow.
-A model that is trained and tested on the same data will appear artificially strong but will fail in real‑world situations.
-Train–test splitting protects us against this by ensuring we evaluate the model only on data it has never seen before.
+```python
+from sklearn.linear_model import LogisticRegression
 
+model = LogisticRegression()
+model.fit(X_train_scaled, y_train)
+```
 
-## Section 1 — Train–Test Split
-Before we train any machine‑learning model, we must split our dataset into two parts:
+### Explanation
 
-- Training set — used to fit/learn the model
-- Testing set — used to evaluate how well the model generalizes to unseen data
+- **Logistic Regression** learns a weight (coefficient) for each feature.
+- During training, it identifies patterns in `X_train_scaled` that help distinguish class **0 (No Diabetes)** from class **1 (Diabetes)**.
+- The model outputs a probability between 0 and 1 for each test sample, representing how likely the model believes the instance belongs to class 1.
+- This model is commonly used in cybersecurity for tasks such as:
+  - intrusion detection  
+  - malware classification  
+  - authentication anomaly detection  
+  - fraud detection  
 
-This is one of the most important steps in the entire machine‑learning workflow.
-A model that is trained and tested on the same data will appear artificially strong but will fail in real‑world situations.
-Train–test splitting protects us against this by ensuring we evaluate the model only on data it has never seen before.
+Logistic Regression serves as an excellent **baseline model** because:
+- it is interpretable (weights show feature influence)
+- it trains quickly
+- it provides probability scores
+- it highlights whether preprocessing was done correctly
+
+You will later compare other models to this baseline in future labs.
+
+### Reflection Questions
+
+- Why is Logistic Regression considered a good baseline model for binary classification?
+- What might happen if the features were **not** scaled before training?
+- In a cybersecurity scenario, which task could Logistic Regression be applied to, and why?
+
+## Section 
