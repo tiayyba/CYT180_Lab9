@@ -22,6 +22,7 @@ By the end of this lab you will be able to:
 - Visualize key performance results
 - Interpret model behavior in a cybersecurity context
 - Produce a structured analytical report summarizing methodology, results, and insights
+  
 ----
 
 ## Section 1 — Data Setup (Load Raw Data and Apply Minimal Preprocessing)
