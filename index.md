@@ -70,19 +70,19 @@ X_train_scaled = scaler.fit_transform(X_train)  # fit on train
 X_test_scaled  = scaler.transform(X_test)       # transform test
 ```
 
-You may be thinking why we split first, then scale (even though we scaled in Lab 7). In Lab 7, scaling was performed as part of exploratory data analysis, not model training. Its purpose was:
+You may be thinking why we split first, then scale (even though in Lab 8 we scaled the date before spliting). In Lab 8, scaling was performed as part of exploratory data analysis, not model training. Its purpose was:
 - to compare feature ranges
 - to understand relationships
 - to visually inspect normalized distributions
 - to prepare for future modeling
 - to introduce students to scaling early
 
-However, the scaling done in Lab 7 is not appropriate for actual model training because scaling must always be fit on the training set only. If we scale **before** splitting, this happens:
+However, the scaling done in Lab 8 is not appropriate for actual model training because scaling must always be fit on the training set only. If we scale **before** splitting, the following situations are possible:
 - the scaler “looks at” the entire dataset, including test data.
 - this gives the model information about the test set it shouldn’t have.
 - this is called **data leakage**, and it makes evaluation unreliable  
 
-Therefore, Lab 8 uses the correct machine‑learning practice:
+Therefore, Lab 9 uses the correct machine‑learning practice:
 
 ```text
 Split → Fit scaler on X_train → Transform X_train & X_test
