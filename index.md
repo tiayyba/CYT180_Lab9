@@ -27,7 +27,7 @@ By the end of this lab you will be able to:
 
 ## Section 1 — Data Setup (Load Raw Data and Apply Minimal Preprocessing)
 
-In Lab 7, you performed a full preprocessing workflow that included cleaning, outlier removal, correlation analysis, class balance inspection, and scaling the feature matrix. However, Lab 8 may be run in a new notebook, and variables such as `clean_df`, `X`, and `X_normalized` will not exist automatically. To make Lab 8 self‑contained and reproducible, we reload the raw dataset and repeat the minimum required preprocessing steps, so that the data is ready for modeling.
+In Lab 8, you performed a full preprocessing workflow that included cleaning, outlier removal, correlation analysis, class balance inspection, and scaling the feature matrix. Lab 9 is the continuation of Lab 8. To make Lab 8 self‑contained and reproducible, we reload the raw dataset and repeat the minimum required preprocessing steps, so that the data is ready for modeling and the variables such as `clean_df`, `X`, and `X_normalized` exist for further processing.
 
 Section 1 re‑creates the essential outputs of Lab 7:
 
