@@ -29,7 +29,7 @@ By the end of this lab you will be able to:
 
 In Lab 8, you performed a full preprocessing workflow that included cleaning, outlier removal, correlation analysis, class balance inspection, and scaling the feature matrix. Lab 9 is the continuation of Lab 8. To make Lab 8 self‑contained and reproducible, we reload the raw dataset and repeat the minimum required preprocessing steps, so that the data is ready for modeling and the variables such as `clean_df`, `X`, and `X_normalized` exist for further processing.
 
-Section 1 re‑creates the essential outputs of Lab 7:
+Section 1 re‑creates the essential outputs of Lab 8:
 
 - Load the original CSV
 - Remove outliers using the same IQR technique
