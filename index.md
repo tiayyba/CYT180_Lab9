@@ -128,7 +128,7 @@ You will later compare other models to this baseline in future labs.
 
 - Why is Logistic Regression considered a good baseline model for binary classification?
 - What might happen if the features were **not** scaled before training?
-- Why are we applying `fit_transform()` on Training data and `transform()` on test data?
+- Why we apply `fit_transform()` on training data and `transform()` on test data?
 
 ----
 
