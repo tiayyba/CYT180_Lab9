@@ -8,7 +8,7 @@
 ## Introduction
 In Lab 8, you completed all essential preprocessing tasks needed to prepare a structured dataset for supervised machine learning. You inspected the dataset, cleaned inconsistencies, analyzed distributions, removed outliers, evaluated correlations, examined class balance, separated features from the target variable, and applied feature scaling. These steps ensured that your dataset is clean, consistent, and mathematically ready for modeling.
 In this lab, you will move into the modeling and evaluation stage of the machine‑learning workflow. You will split your dataset into training and testing sets, build a baseline classification model, generate predictions, evaluate model performance using industry‑standard metrics, visualize diagnostic plots, and interpret the results in a cybersecurity context.
-This phase is critical: a model is only as useful as its ability to generalize to new, unseen data. The steps in Lab 8 are designed to help you understand not only how to build a model, but also how to evaluate it responsibly and translate metrics into practical insights for cybersecurity analytics.
+This phase is critical: a model is only as useful as its ability to generalize to new, unseen data. The steps in Lab 9 are designed to help you understand not only how to build a model, but also how to evaluate it responsibly and translate metrics into practical insights for cybersecurity analytics.
 
 ----
 
