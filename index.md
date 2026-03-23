@@ -244,7 +244,6 @@ A central tool for understanding model behavior.
 
 - Why can accuracy be misleading in cybersecurity datasets with class imbalance?  
 - For malware detection, which is more important — precision or recall — and why?  
-- What information does the ROC curve provide that accuracy cannot?
 
 ----
 
