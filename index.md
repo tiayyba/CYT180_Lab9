@@ -377,10 +377,10 @@ Good preprocessing → more stable model.
 
 ----
 
-## Section 7 — Reporting Template (Student Submission)
+## Submission Guidelines
 
-The final step of this lab is to create a short, structured report that summarizes everything you completed in Lab 8.  
-This report should be **1–2 pages** and written in clear, professional language.  
+The final step of this lab is to create a short, structured report that summarizes everything you completed in this lab.  
+This report should be **3-4 pages** and written in clear, professional language.  
 Use the template below as your guide.  
 You may include screenshots from your notebook where appropriate.
 
@@ -388,10 +388,10 @@ You may include screenshots from your notebook where appropriate.
 
 ### **1. Introduction**
 Briefly summarize:
-- The purpose of Lab 8  
+- The purpose of Lab 9  
 - What dataset was used  
 - What problem the model is trying to solve  
-- How this lab connects to the preprocessing work completed in Lab 7  
+- How this lab connects to the preprocessing work completed in Lab 8 
 
 A good introduction answers:  
 “What is this experiment about, and why does it matter?”
@@ -418,8 +418,7 @@ Include the key outputs from your evaluation:
 - Confusion matrix  
 - ROC curve with AUC value  
 
-Use tables or screenshots to present results clearly.  
-Focus on what the numbers show about the model’s behavior.
+Use the ROC and AUC plot to explain the model’s behavior.
 
 ---
 
@@ -449,8 +448,8 @@ Keep this section concise and focused on big‑picture takeaways.
 
 ### **Report Submission Notes**
 Your report should be:
-- 1–2 pages  
-- Professional and clearly organized  
+- 3-4 pages  
+- Professional and clearly organized in sections in the correct order. 
 - Written in complete sentences  
 - Supported with screenshots or tables where helpful  
 
