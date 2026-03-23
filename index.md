@@ -169,10 +169,6 @@ Probability outputs are essential for:
 - threshold tuning  
 - risk‑based decision making (very important in cybersecurity)
 
-### Reflection Questions
-- In threat detection, when might it be useful to adjust the classification threshold rather than rely on the default 0.5?
-- How could probability outputs help in prioritizing cybersecurity alerts?
-
 ----
 
 ## Section 4 — Evaluation Metrics
