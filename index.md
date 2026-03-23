@@ -1,7 +1,7 @@
 # CYT180 — Lab 9: Machine‑Learning Model Training and Performance Evaluation
 **Weight:** 3% <br>
 **Work Type:** Individual <br>
-**Submission Format:** 
+**Submission Format:** Report
 
 ----
 
@@ -93,8 +93,7 @@ This is critically important in cybersecurity, where even small leaks can result
 Now that the data is properly prepared, we can proceed to **Step 2: Train a Classification Model**.
 
 ----
-
-## Step 2 — Train a Classification Model
+## Section 2 — Train a Classification Model
 
 Now that the dataset has been properly prepared (loaded, cleaned, split into training/testing sets, and scaled), we can train our first supervised machine‑learning model. In this lab, we will use **Logistic Regression**, a widely used baseline classifier for binary classification tasks. It is simple, fast, easy to interpret, and performs well when features have been normalized — which we ensured in Section 1.
 
@@ -326,8 +325,6 @@ In a SOC environment, this leads to:
 
 Too many false positives can make a detection model unusable.
 
----
-
 **2. Recall and Missed Attacks (False Negatives)**  
 Low recall means the model is missing actual threats.  
 In cybersecurity, false negatives are often more dangerous than false positives because:
@@ -337,8 +334,6 @@ In cybersecurity, false negatives are often more dangerous than false positives 
 
 A high-recall model is critical when the cost of missing an attack is severe.
 
----
-
 **3. Confusion Matrix Insights**  
 The confusion matrix reveals where the model struggles:
 - High FN? → Model is too conservative, missing threats  
@@ -347,14 +342,10 @@ The confusion matrix reveals where the model struggles:
 
 This matrix provides insight that accuracy alone cannot.
 
----
-
 **4. AUC and Overall Separability**  
 A high AUC value indicates the model can distinguish malicious vs. benign behavior across many thresholds — important in cybersecurity where thresholds are often adjusted dynamically.
 
 AUC expresses overall model quality independent of a fixed cutoff.
-
----
 
 **5. Feature Quality (Link to Lab 7)**  
 The model’s performance reflects the quality of preprocessing done earlier:
@@ -365,7 +356,6 @@ The model’s performance reflects the quality of preprocessing done earlier:
 
 Good preprocessing → more stable model.
 
----
 
 ### Reflection Questions
 
@@ -384,8 +374,6 @@ This report should be **3-4 pages** and written in clear, professional language.
 Use the template below as your guide.  
 You may include screenshots from your notebook where appropriate.
 
----
-
 ### **1. Introduction**
 Briefly summarize:
 - The purpose of Lab 9  
@@ -396,8 +384,6 @@ Briefly summarize:
 A good introduction answers:  
 “What is this experiment about, and why does it matter?”
 
----
-
 ### **2. Methods**
 Describe the steps you performed:
 - How you reloaded and minimally preprocessed the dataset  
@@ -406,8 +392,6 @@ Describe the steps you performed:
 - What model you chose (Logistic Regression) and why it is an appropriate baseline  
 
 This section explains *how* you conducted the experiment.
-
----
 
 ### **3. Results**
 Include the key outputs from your evaluation:
@@ -420,8 +404,6 @@ Include the key outputs from your evaluation:
 
 Use the ROC and AUC plot to explain the model’s behavior.
 
----
-
 ### **4. Interpretation**
 Discuss the meaning of your results:
 - What the confusion matrix tells you about false positives and false negatives  
@@ -432,8 +414,6 @@ Discuss the meaning of your results:
 
 This is the most important part — explain what the results *mean*, not just what they *are*.
 
----
-
 ### **5. Conclusion**
 Summarize your insights:
 - Overall performance of the model  
@@ -443,8 +423,6 @@ Summarize your insights:
   (e.g., additional features, different models, threshold adjustments)
 
 Keep this section concise and focused on big‑picture takeaways.
-
----
 
 ### **Report Submission Notes**
 Your report should be:
